@@ -1,0 +1,18 @@
+<div class="d-flex">
+  <button class="toggle-button" [ngClass]="{'d-none':$sideBarOpened|async}" (click)="toggleSidebar()" mat-icon-button>
+    <mat-icon>format_indent_increase</mat-icon>
+  </button>
+  <div class="d-flex justify-content-between w-100 align-items-center">
+    <h2 class="mat-h-2 m-0">
+      {{ $pageTitle|async }}
+    </h2>
+    <div class="d-flex">
+      <button mat-icon-button>
+        <mat-icon>notifications</mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon>account_circle</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
