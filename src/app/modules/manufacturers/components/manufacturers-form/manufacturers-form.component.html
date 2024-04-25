@@ -1,0 +1,126 @@
+<form [formGroup]="form" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="form-card">
+    <mat-card-header>
+      <mat-card-title>Formulário de Fabricante</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="mt-3">
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input [inputMask]="cnpjInputMask" matInput placeholder="CNPJ*" formControlName="cnpj"
+              [readonly]="!!initialData">
+            @if (form.controls['cnpj'].hasError('required')) {
+            <mat-error>O CNPJ é <strong>obrigatório</strong></mat-error>
+            }
+            @if (form.controls['cnpj'].hasError('inputMask')) {
+            <mat-error>CNPJ <strong>inválido</strong></mat-error>
+            }
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Nome*" formControlName="nome">
+            @if (form.controls['nome'].hasError('required')) {
+            <mat-error>O nome é <strong>obrigatório</strong></mat-error>
+            }
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Tipo de Contato*" formControlName="contatoTipo">
+              @for (contactType of contactTypes; track contactType) {
+              <mat-option [value]="contactType">{{ contactType }}</mat-option>
+              }
+            </mat-select>
+            @if (form.controls['contatoTipo'].hasError('required')) {
+            <mat-error>O tipo de contato é <strong>obrigatório</strong></mat-error>
+            }
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            @if (
+            form.controls['contatoTipo'].value && form.controls['contatoTipo'].value !== 'Email'
+            ) {
+            <input matInput [inputMask]="phoneInputMask" placeholder="Contato*" formControlName="contato">
+            }
+            @else {
+            <input type="email" matInput placeholder="Contato*" formControlName="contato">
+            }
+            @if (form.controls['contato'].hasError('required')) {
+            <mat-error>O contato é <strong>obrigatório</strong></mat-error>
+            }
+            @if (form.controls['contato'].hasError('inputMask')) {
+            <mat-error>Formato <strong>inválido</strong></mat-error>
+            }
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput [inputMask]="cepInputMask" placeholder="Cep*" formControlName="cep" />
+            @if (form.controls['cep'].hasError('required')) {
+            <mat-error>O CEP é <strong>obrigatório</strong></mat-error>
+            }
+            @if (form.controls['cep'].hasError('inputMask')) {
+            <mat-error>CEP <strong>inválido</strong></mat-error>
+            }
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Logradouro*" formControlName="logradouro" />
+            @if (form.controls['logradouro'].hasError('required')) {
+            <mat-error>O Endereço é <strong>obrigatório</strong></mat-error>
+            }
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Número" formControlName="numero">
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Complemento" formControlName="complemento">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Cidade*" formControlName="cidade">
+            @if (form.controls['cidade'].hasError('required')) {
+            <mat-error>A Cidade é <strong>obrigatória</strong></mat-error>
+            }
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Estado*" formControlName="estado">
+              @for (state of states; track state) {
+              <mat-option [value]="state.abbreviation">{{ state.name }}</mat-option>
+              }
+            </mat-select>
+            @if (form.controls['estado'].hasError('required')) {
+            <mat-error>O Estado é <strong>obrigatório</strong></mat-error>
+            }
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions class="justify-content-between gap-5 mt-3">
+      <a mat-stroked-button class="w-100" routerLink="/manufacturers">Cancelar</a>
+      <button mat-raised-button color="primary" class="w-100" type="submit">Salvar</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

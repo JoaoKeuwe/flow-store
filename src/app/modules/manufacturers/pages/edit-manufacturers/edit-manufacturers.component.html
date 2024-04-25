@@ -1,0 +1,12 @@
+<ng-container *ngIf="$data |async; let data; else elseBlock">
+  <app-manufacturers-form [initialData]="data" />
+</ng-container>
+<ng-template #elseBlock>
+  <div class="p-5 d-flex justify-content-center align-items-center w-100 flex-column mt-3">
+    <mat-progress-spinner color="primary" strokeWidth="10" mode="indeterminate">
+    </mat-progress-spinner>
+    <span class="mat-h3 mt-3">
+      Carregando...
+    </span>
+  </div>
+</ng-template>

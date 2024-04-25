@@ -1,0 +1,48 @@
+<div class="mat-elevation-z8">
+  <mat-table [dataSource]="dataSource" class="full-width-table" matSort aria-label="Elements">
+    <!-- Id Column -->
+    <ng-container matColumnDef="nome">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>NOME</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.nome}}</mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="cnpj">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>CNPJ</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.cnpj}}</mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="endereco">
+      <mat-header-cell *matHeaderCellDef>ENDEREÇO</mat-header-cell>
+      <mat-cell *matCellDef="let row" class="text-truncate">{{row.endereco}}</mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="actions">
+      <mat-header-cell *matHeaderCellDef>AÇÕES</mat-header-cell>
+      <mat-cell *matCellDef="let row" class="gap-2 actions-cell">
+        <a mat-icon-button [routerLink]="['/manufacturers/edit', row.uriCnpj]">
+          <mat-icon>edit</mat-icon>
+        </a>
+        <button mat-icon-button (click)="delete(row.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+
+    <tr *matNoDataRow class="p-5 d-flex justify-content-center align-items-center w-100 flex-column mt-3">
+      <mat-progress-spinner color="primary" strokeWidth="10" mode="indeterminate">
+      </mat-progress-spinner>
+      <span class="mat-h3 mt-3">
+        Carregando...
+      </span>
+    </tr>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+  <mat-paginator #paginator [length]="totalElements" [pageIndex]="0" [pageSize]="10" [pageSizeOptions]="[5, 10, 20]"
+    aria-label="Select page">
+  </mat-paginator>
+</div>
