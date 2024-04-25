@@ -1,0 +1,20 @@
+<!-- Invalid because there are multiple `<mat-sidenav-content>` elements. -->
+<div class="ps-3">
+  <div class="d-flex align-items-center">
+    <img class="logo" src="/assets/img/app-logo.png" alt="app logo">
+    <button class="toggle-button" (click)="toggle()" mat-icon-button>
+      <mat-icon>format_indent_decrease</mat-icon>
+    </button>
+  </div>
+</div>
+<span class="mat-caption pt-5 ps-3">
+  MENU PRINCIPAL
+</span>
+<mat-nav-list class="mat-nav-list">
+  <a *ngFor="let item of menuItems" mat-list-item routerLinkActive="active" [routerLink]="['/', item.path]">
+    <div class="d-flex align-items-center gap-3">
+      <mat-icon class="sidenav-icon">{{ item.icon }}</mat-icon>
+      {{ item.title }}
+    </div>
+  </a>
+</mat-nav-list>

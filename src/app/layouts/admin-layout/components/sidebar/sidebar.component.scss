@@ -1,0 +1,39 @@
+.sidebar-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.mat-nav-list {
+  width: 100%;
+
+  a {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+
+    * {
+      color: #8B909A !important;
+    }
+
+    &.active {
+      background-color: #e0e0e0;
+
+      * {
+        color: black !important;
+      }
+    }
+  }
+
+}
+
+.toggle-button {
+  color: #8B909A;
+}
+
+.logo {
+  width: 173px;
+  height: 30px;
+}
