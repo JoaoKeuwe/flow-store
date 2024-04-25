@@ -1,0 +1,14 @@
+<div class="container">
+  <mat-sidenav-container class="sidebar-container">
+    <mat-sidenav (closed)="closeSidebar()" #sidenav [mode]="($mobileMediaMatches |async)?'over':'side'"
+      [opened]="$sidebarOpened|async">
+      <app-sidebar></app-sidebar>
+    </mat-sidenav>
+    <mat-sidenav-content class="px-4 py-2">
+      <app-navbar />
+      <main class="rounded-3 mt-3">
+        <router-outlet></router-outlet>
+      </main>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
