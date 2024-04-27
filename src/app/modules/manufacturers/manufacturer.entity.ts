@@ -1,16 +1,16 @@
 export class ManufacturerEntity {
-  id: string;           // Identificador único
-  nome: string;         // Nome do fabricante
-  cnpj: string;         // CNPJ do fabricante
-  cep: string;          // Código Postal
-  logradouro: string;   // Logradouro
-  numero: string;       // Número do endereço
-  complemento: string;  // Complemento do endereço
-  bairro: string;       // Bairro
-  cidade: string;       // Cidade
-  estado: string;       // Estado
-  contatoTipo: string;  // Tipo de contato (e.g., telefone, email)
-  contato: string;      // Dados de contato
+  id: string;
+  nome: string;
+  cnpj: string;
+  cep: string;
+  logradouro: string;
+  numero: string;
+  complemento: string;
+  bairro: string;
+  cidade: string;
+  estado: string;
+  contatoTipo: string;
+  contato: string;
 
   constructor(manufacturer: Omit<ManufacturerEntity, 'endereco'>) {
     this.id = manufacturer.id;

@@ -1,11 +1,11 @@
-import { ManufacturerEntity } from "../manufacturers/manufacturer.entity";
+import { ManufacturerEntity } from '../manufacturers/manufacturer.entity';
 
 export class ProductEntity {
-  id: string;           // Identificador único
-  nome: string;         // Nome do produto
-  descricao: string;         // Descrição do produto
-  codigoBarras: string;          // Código de barras
-  fabricante?: ManufacturerEntity;   // Referencia do fabricante
+  id: string;
+  nome: string;
+  descricao: string;
+  codigoBarras: string;
+  fabricante?: ManufacturerEntity;
 
   constructor(product: ProductEntity) {
     this.id = product.id;
