@@ -8,6 +8,7 @@ import { InputMaskModule } from '@ngneat/input-mask';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponentsModule } from './modules/components/components.module';
+import { ProfileComponent } from './layouts/admin-layout/components/profile/profile.component';
 
 @NgModule({
   imports: [
@@ -23,6 +24,7 @@ import { ComponentsModule } from './modules/components/components.module';
   ],
   declarations: [
     AppComponent,
+    ProfileComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],

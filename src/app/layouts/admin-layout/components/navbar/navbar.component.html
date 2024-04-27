@@ -7,11 +7,11 @@
       {{ $pageTitle|async }}
     </h2>
     <div class="d-flex">
-      <button mat-icon-button>
-        <mat-icon>notifications</mat-icon>
+      <button  mat-icon-button>
+        <mat-icon >notifications</mat-icon>
       </button>
-      <button mat-icon-button>
-        <mat-icon>account_circle</mat-icon>
+      <button mat-icon-button [routerLink]="['/profile']">
+        <img  class="profile-image" src="/assets/img/profile-image.jpg" alt="">
       </button>
     </div>
   </div>

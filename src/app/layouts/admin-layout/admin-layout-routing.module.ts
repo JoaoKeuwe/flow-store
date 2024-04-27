@@ -6,6 +6,7 @@ import { ListManufacturersComponent } from '../../modules/manufacturers/pages/li
 import { CreateProductsComponent } from '../../modules/products/pages/create-products/create-products.component';
 import { EditProductsComponent } from '../../modules/products/pages/edit-products/edit-products.component';
 import { ListProductsComponent } from '../../modules/products/pages/list-products/list-products.component';
+import { ProfileComponent } from '../../layouts/admin-layout/components/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -19,11 +20,11 @@ const routes: Routes = [
   },
   {
     path: 'manufacturers/create',
-    component: CreateManufacturersComponent
+    component: CreateManufacturersComponent,
   },
   {
     path: 'manufacturers/edit/:id',
-    component: EditManufacturersComponent
+    component: EditManufacturersComponent,
   },
   {
     path: 'products',
@@ -31,12 +32,16 @@ const routes: Routes = [
   },
   {
     path: 'products/create',
-    component: CreateProductsComponent
+    component: CreateProductsComponent,
   },
   {
     path: 'products/edit/:id',
-    component: EditProductsComponent
-  }
+    component: EditProductsComponent,
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent,
+  },
 ];
 
 @NgModule({

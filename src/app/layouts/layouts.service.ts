@@ -6,7 +6,7 @@ import { BehaviorSubject, Observable, map } from 'rxjs';
   providedIn: 'root'
 })
 export class LayoutsService {
-  $pageTitle = new BehaviorSubject<string>('Desafio Técnico Frontend');
+  $pageTitle = new BehaviorSubject<string>('Perfil');
   $mobileMediaMatches: Observable<boolean>;
 
   $sidebarOpened = new BehaviorSubject<boolean>(true);
