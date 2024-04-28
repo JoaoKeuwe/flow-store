@@ -56,5 +56,5 @@ https://github.com/JoaoKeuwe/flow-store/assets/91097315/9e57be8a-c8f2-46bb-9506-
 ```
 <br>
 
-## Deploy do projeto
+## Deploy do projeto ⬇️
 Acesse: [Flow Store](https://flow-store.vercel.app/manufacturers) 👨🏾‍💻
