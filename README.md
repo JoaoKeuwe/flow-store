@@ -1,27 +1,60 @@
-# DesafioTecnicoFrontend
+<h1 align='center' >
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
+Projeto Flow Store 👨🏾‍💻
 
-## Development server
+<h1/>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## (📱Caso esteja pelo celular é so clicar no link abaixo📱)
 
-## Code scaffolding
+https://github.com/JoaoKeuwe/flow-store/assets/91097315/9e57be8a-c8f2-46bb-9506-fe04ba67c517
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Sobre o Projeto
 
-## Build
+-O projeto Flow store é um sistema de gerenciamento, criação, edição de entidades, como produtos e fabricantes<br>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## O que foi passado no desafio:
 
-## Running unit tests
+- Desenvolver uma aplicação para um sistema de gerenciamento de produtos e fabricantes
+## Tecnologias utilizadas:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- [AngularJs](https://angularjs.org/)
+- [Angular Material](https://material.angular.io/)
+- [Bootstrap](https://ng-bootstrap.github.io/#/home)  
+- [Google fonts | Icons](https://fonts.google.com/)
+- [Input-Mask](https://primeng.org/inputmask)
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# Sobre o que foi desenvolvido no projeto:
+👨🏾‍💻 Foram utilizadas metodologias que são aplicadas no mercado de trabalho, principalmente na organização das pastas e o nome de cada uma delas, ja sendo feito pensando em atualizações futuras, com a pesquisa orientada a pastas e não só a arquivos, pois em uma grande aplicação muitos nomes de arquivos podem se repetir.
+ 
+📲 Projeto totalmente repsonsivo, tanto para celulares e tablets, quanto para o desktop !
 
-## Further help
+🔥 Foram feitos diversos commits pensando em mostrar a trajetória do projeto desde seu inicio, com pequenos e descritivos commits.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+🚩 Foi também utilizada a API fornecida pela empresa para que pudesse ser feito o CRUD, busca e filtro.
+
+
+## Guia de instalação do projeto para a sua máquina !
+
+```bash
+ # Clonar o repositório
+ $ git clone git@github.com:JoaoKeuwe/flow-store.git
+
+ # Entrar no diretório(pasta) da aplicação
+ $ cd flow-store
+
+ # Instalar todas as dependencias de desenvolvimento do projeto (necessita ter o Node(npm) instalado)
+ $ npm install
+
+ # Comando para executar o projeto
+ $ ng serve
+ 
+ # Caso não abra direto em seu navegador digitar no campo de busca 
+ $ http://localhost:4200/
+
+
+```
+<br>
+
+## Deploy do projeto
+Acesse: [Flow Store](https://flow-store.vercel.app/manufacturers) 👨🏾‍💻
